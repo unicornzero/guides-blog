@@ -1,7 +1,9 @@
 GuidesBlog::Application.routes.draw do
   root to: "welcome#index"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   
   get "welcome/index"
 
